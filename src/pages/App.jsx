@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Login } from "../components/Login.jsx";
 import { Register } from "../components/Registro.jsx";
 import { FirstApp } from "../components/FirstApp.jsx";
+import { FetchSimpsonsApi } from '../pages/FetchSimpsonsApi.jsx';
 
 
 export function App() {
@@ -23,6 +24,7 @@ export function App() {
         <h1>Bienvenido</h1>
         <button onClick={() => setShowTask("task1")}>Tarea 1</button>
         <button onClick={() => setShowTask("task2")}>Tarea 2</button>
+        <button onClick={() => setShowTask("task3")}>Tarea 3</button>
         </div>
 
        {showTask === "task1" ?<FirstApp /> : ""}
@@ -47,7 +49,7 @@ export function App() {
       ) : (
         <h1> </h1>
       )}
-
+        {showTask === "task3" ? <FetchSimpsonsApi /> : <h1></h1>}
     </div>
   );
 }
